@@ -39,5 +39,23 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          '/*': [
+            `Content-Security-Policy: script-src 'self' 'unsafe-inline'`,
+            `Referrer-Policy: same-origin`,
+            `Expect-CT: enforce,max-age=604800`,
+          ],
+        },
+        allPageHeaders: [],
+        mergeSecurityHeaders: true,
+        mergeLinkHeaders: true,
+        mergeCachingHeaders: true,
+        transformHeaders: (headers, path) => headers,
+        generateMatchPathRewrites: true,
+      },
+    },
   ],
 }
