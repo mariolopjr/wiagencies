@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'World Insurance',
+    auto: 'https://florida.clutchinsurance.com/new/quote?productTerritory=FL&assignedAgency=843500-000-000',
+    home: 'https://thehearth.com/homeowners-insurance-quotes/?assignedAgency=843500-000-000',
   },
   plugins: [
     {
