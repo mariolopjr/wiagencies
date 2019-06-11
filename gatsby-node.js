@@ -1,35 +1,5 @@
-const pxtorem = require('postcss-pxtorem')
-
-exports.modifyWebpackConfig = ({ config }) => {
-  config.merge({
-    postcss: [
-      pxtorem({
-        rootValue: 16,
-        unitPrecision: 5,
-        propList: [
-          'font',
-          'font-size',
-          'line-height',
-          'letter-spacing',
-          'margin',
-          'margin-top',
-          'margin-left',
-          'margin-bottom',
-          'margin-right',
-          'padding',
-          'padding-top',
-          'padding-left',
-          'padding-bottom',
-          'padding-right',
-          'border-radius',
-          'width',
-          'max-width'
-        ],
-        selectorBlackList: [],
-        replace: true,
-        mediaQuery: false,
-        minPixelValue: 0
-      })
-    ]
-  });
-};
+/**
+ * Implement Gatsby's Node APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/node-apis/
+ */
