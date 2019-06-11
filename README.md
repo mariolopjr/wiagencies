@@ -1,26 +1,9 @@
-# gatsby-starter-default
-The default Gatsby starter.
+# World Insurance — [wiagencies.com](https://wiagencies.com)
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
 
-## Install
+[![Netlify Status](https://api.netlify.com/api/v1/badges/69e467e7-c95c-4d5a-999e-250212a9bebc/deploy-status)](https://app.netlify.com/sites/wiagencies/deploys)
 
-Make sure that you have the Gatsby CLI program installed:
-```sh
-npm install --global gatsby-cli
-```
 
-And run from your CLI:
-```sh
-gatsby new gatsby-example-site
-```
-
-Then you can run it by:
-```sh
-cd gatsby-example-site
-npm run develop
-```
-
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+## Powered by the following amazing technology
+ - [Netlify](https://www.netlify.com)
+ - [Gatsby v2](https://www.gatsbyjs.org)
