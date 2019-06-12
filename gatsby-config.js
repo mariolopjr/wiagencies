@@ -35,9 +35,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
-        printRejected: true, // Print Removed Selectors
-        printAll: true,
-        develop: true,
+        printRejected: false, // Print Removed Selectors
         tailwind: false, // Enable tailwindcss support
         whitelist: [ 'whitelistclass', 'bg', 'gatsby-image-wrapper'], // Don't remove this selector
         ignore: [] // Ignore file/folder
