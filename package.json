@@ -5,8 +5,8 @@
   "author": "Mario Lopez <mario@techmunchies.net>",
   "dependencies": {
     "bulma": "^0.8.0",
-    "gatsby": "^2.19.12",
-    "gatsby-image": "^2.2.40",
+    "gatsby": "^2.19.17",
+    "gatsby-image": "^2.2.41",
     "gatsby-link": "^2.2.29",
     "gatsby-plugin-manifest": "^2.2.41",
     "gatsby-plugin-netlify": "^2.1.32",
