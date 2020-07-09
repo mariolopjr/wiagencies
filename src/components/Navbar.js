@@ -36,41 +36,37 @@ class Navbar extends React.Component {
           >
             {this.props.siteTitle}
           </a>
-          <a
+          <button
             className={`navbar-burger ${burgerActive}`}
-            role="button"
             aria-label="menu"
             aria-expanded="false"
             onClick={this.toggleMenu}
-            href="#"
           >
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
-          </a>
+          </button>
         </div>
 
         <div id="site-nav" className={`navbar-menu ${menuActive}`}>
           <div className="navbar-end">
             <div className="navbar-item">
-              <div className="field is-grouped is-size-5 has-text-white">
-                <a
-                  className="navbar-item"
+              <div className="field is-grouped">
+                <button
+                  className="navbar-item is-size-5 has-text-white"
                   data-target="modal"
                   aria-haspopup="true"
                   onClick={this.toggleAddress}
-                  href="#"
                 >
                   Address
-                </a>
-                <a
-                  className="navbar-item"
+                </button>
+                <button
+                  className="navbar-item is-size-5 has-text-white"
                   data-target="modal"
                   aria-haspopup="true"
                   onClick={this.toggleContact}
-                  href="#"
                 >
                   Contact
-                </a>
+                </button>
               </div>
             </div>
           </div>

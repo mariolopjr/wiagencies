@@ -33,6 +33,9 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Helmet
+          htmlAttributes={{
+            lang: "en",
+          }}
           title={data.site.siteMetadata.title}
           meta={[
             { name: "title", content: "World Insurance Agency" },
@@ -50,7 +53,9 @@ const Layout = ({ children }) => (
               position: `absolute`,
             }}
             sizes={data.heroBg.sizes}
-            title={`Photo by Danielle MacInnes on Unsplash`}
+            alt="Background Photo by Danielle MacInnes on Unsplash"
+            title="Background Photo by Danielle MacInnes on Unsplash"
+            loading="eager"
           />
 
           <div className="hero-head">
@@ -65,6 +70,8 @@ const Layout = ({ children }) => (
               src="/img/ethics-registered-member-badge.png"
               className="is-pulled-right"
               alt="Ethics Registered Member"
+              title="Ethics Registered Member"
+              loading="lazy"
             ></img>
           </div>
         </section>
