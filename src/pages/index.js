@@ -1,14 +1,13 @@
 import React from "react"
 
 import Layout from "../components/layout"
+import Title from "../components/title"
 
 const IndexPage = () => (
   <Layout>
     <div className="container">
       <div className="columns">
-        <h1 className="title column is-half is-size-2 is-size-4-mobile has-text-white">
-          It's all about keeping you safe while saving you money
-        </h1>
+        <Title title="It's all about keeping you safe while saving you money" />
       </div>
     </div>
   </Layout>

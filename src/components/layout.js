@@ -28,6 +28,11 @@ const Layout = ({ children }) => (
             ...GatsbyImageSharpSizes_withWebp
           }
         }
+        ethicsLogo: imageSharp(fluid: { originalName: { regex: "/ethics-registered-member-badge.png/" } }) {
+          sizes(maxWidth: 80) {
+            ...GatsbyImageSharpSizes_withWebp
+          }
+        }
       }
     `}
     render={data => (
@@ -66,13 +71,13 @@ const Layout = ({ children }) => (
 
           <div className="hero-foot has-text-centered is-size-6 has-text-white">
             &copy; World Insurance Agency
-            <img
-              src="/img/ethics-registered-member-badge.png"
+            <Img
               className="is-pulled-right"
+              sizes={data.ethicsLogo.sizes}
               alt="Ethics Registered Member"
               title="Ethics Registered Member"
               loading="lazy"
-            ></img>
+            />
           </div>
         </section>
       </>

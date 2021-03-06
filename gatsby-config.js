@@ -2,19 +2,18 @@ module.exports = {
   siteMetadata: {
     title: 'World Insurance',
     siteUrl: 'https://wiagencies.com',
-    auto: 'https://florida.clutchinsurance.com/new/quote?productTerritory=FL&assignedAgency=843500-000-000',
-    home: 'https://thehearth.com/homeowners-insurance-quotes/?assignedAgency=843500-000-000',
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/static/img`,
+        path: `${__dirname}/static/images`,
         name: 'images',
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-robots-txt`,
@@ -41,36 +40,6 @@ module.exports = {
         ignore: [] // Ignore file/folder
       }
     },
-    `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        headers: {
-          "/*": [
-            "Cache-Control: public, max-age=31536000, immutable",
-            "Content-Security-Policy: script-src 'self' 'unsafe-inline'",
-            "Referrer-Policy: same-origin",
-            "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
-          ],
-          "/*.js": [
-            "X-Content-Type-Options: nosniff",
-          ],
-          "/sw.js": [
-            "Cache-Control: public, max-age=0, must-revalidate",
-          ],
-          "/*.html": [
-            "Cache-Control: public, max-age=0, must-revalidate",
-            "X-Frame-Options: DENY",
-            "X-XSS-Protection: 1; mode=block",
-          ],
-        },
-        allPageHeaders: [],
-        mergeSecurityHeaders: true,
-        mergeLinkHeaders: true,
-        mergeCachingHeaders: true,
-        transformHeaders: (headers, path) => headers,
-        generateMatchPathRewrites: true,
-      },
-    },
+    `gatsby-plugin-offline`
   ],
 }
