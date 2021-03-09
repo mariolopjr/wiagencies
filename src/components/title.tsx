@@ -4,7 +4,7 @@ import styled from "@emotion/styled"
 import { mq } from "./styles"
 
 const TitleContainer = styled.h1({
-  color: "white",
+  color: "#fff",
   flex: "none",
   fontSize: "1.5rem",
   fontWeight: 600,
@@ -22,7 +22,7 @@ interface TitleProps {
 }
 
 const Title = ({ title }: TitleProps) => (
-  <TitleContainer>${title}</TitleContainer>
+  <TitleContainer>{title}</TitleContainer>
 )
 
 export default Title

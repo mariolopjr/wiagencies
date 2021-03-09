@@ -14,10 +14,10 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-emotion`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -27,18 +27,9 @@ module.exports = {
         background_color: `#138FC2`,
         theme_color: `#209CEE`,
         display: `minimal-ui`,
-        // icon: `src/images/logo.svg`,
+        icon: `static/images/ethics-registered-member-badge.png`,
         legacy: false,
       },
-    },
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        printRejected: false, // Print Removed Selectors
-        tailwind: false, // Enable tailwindcss support
-        whitelist: [ 'whitelistclass', 'bg', 'gatsby-image-wrapper'], // Don't remove this selector
-        ignore: [] // Ignore file/folder
-      }
     },
     `gatsby-plugin-offline`
   ],

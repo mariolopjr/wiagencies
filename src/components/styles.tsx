@@ -1,9 +1,10 @@
 
 import React from "react"
-import { Global } from "@emotion/core"
+import { Global } from "@emotion/react"
 
 export const colors = {
   bgcolor: "#333",
+  selectionColor: "#4a4a4a",
   textcolor: "#fff",
   textShadowColor: "#3b424d",
   fontFamily: `-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,
@@ -31,7 +32,7 @@ export const Theme = () => (
       },
 
       body: {
-        backgroundColor: colors.bodybgcolor,
+        backgroundColor: colors.bgcolor,
         color: "#4a4a4a",
         fontFamily: colors.fontFamily,
         fontSize: "1rem",
@@ -45,22 +46,6 @@ export const Theme = () => (
       "::selection": {
         background: colors.selectionColor,
       },
-
-      ".gatsby-code-title": {
-        backgroundColor: "white",
-        borderTopLeftRadius: "0.3em",
-        borderTopRightRadius: "0.3em",
-        color: "black",
-        fontFamily: colors.fontFamily,
-        marginBottom: "-0.6rem",
-        padding:" 0.5em 1em",
-        zIndex: 0,
-      },
-
-      "pre[class*=\"language-\"]": {
-        border: "none",
-        borderRadius: 0,
-      }
     }}
   />
 )
