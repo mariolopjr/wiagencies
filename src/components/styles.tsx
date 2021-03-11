@@ -4,7 +4,7 @@ import { Global } from "@emotion/react"
 
 export const colors = {
   bgcolor: "#333",
-  selectionColor: "#4a4a4a",
+  selectionColor: "#145d75",
   textcolor: "#fff",
   textShadowColor: "#3b424d",
   fontFamily: `-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,

@@ -12,9 +12,19 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Head from "./head"
 import Body from "./body"
+import Footer from "./footer"
 
 import { css } from "@emotion/react"
-import { colors, Theme } from "./styles"
+import styled from "@emotion/styled"
+import { Theme } from "./styles"
+
+const Hero = styled.div({
+  alignItems: "stretch",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
+  minHeight: "100vh",
+})
 
 const bgStyles = css({
   left: 0,
@@ -70,7 +80,7 @@ const Layout = ({ children }: LayoutProps) => (
             },
           ]}
         />
-        <section className="hero is-fullheight">
+        <Hero>
           <StaticImage
             src="../../static/images/bg.jpg"
             css={bgStyles}
@@ -83,26 +93,9 @@ const Layout = ({ children }: LayoutProps) => (
           />
 
           <Head title={data.site.siteMetadata.title} />
-
-          <div className="hero-body">{children}</div>
-
-          <div className="hero-foot has-text-centered is-size-6 has-text-white">
-            &copy; World Insurance Agency
-            <StaticImage
-              src="../../static/images/ethics-registered-member-badge.png"
-              className="bg"
-              style={{
-                position: `absolute`,
-              }}
-              alt="Ethics registered member badge"
-              title="Ethics registered member badge"
-              placeholder="blurred"
-              layout="constrained"
-              width={80}
-              formats={['auto', 'webp', 'avif']}
-            />
-          </div>
-        </section>
+          <Body>{children}</Body>
+          <Footer copyright="&copy; World Insurance Agency" />
+        </Hero>
       </>
     )}
   />

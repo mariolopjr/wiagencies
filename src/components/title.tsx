@@ -7,8 +7,10 @@ const TitleContainer = styled.h1({
   color: "#fff",
   flex: "none",
   fontSize: "1.5rem",
-  fontWeight: 600,
+  fontWeight: 500,
+  letterSpacing: 1.3,
   lineHeight: 1.125,
+  margin: 0,
   padding: ".75rem",
   width: "50%",
 

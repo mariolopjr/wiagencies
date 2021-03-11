@@ -3,8 +3,12 @@ import React, { ReactNode } from "react"
 import styled from "@emotion/styled"
 
 const BodyContainer = styled.div({
-  flexGrow: 0,
+  alignItems: "center",
+  display: "flex",
+  flexGrow: 1,
   flexShrink: 0,
+  padding: "3rem 1.5rem",
+  zIndex: 30,
 })
 
 interface BodyProps {
