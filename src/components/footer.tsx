@@ -2,15 +2,29 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
 import styled from "@emotion/styled"
+import { mq } from "./styles"
 
 const FooterContainer = styled.footer({
+  alignItems: "center",
   color: "#fff",
-  flexGrow: 0,
-  flexShrink: 0,
+  display: "flex",
   fontSize: "1rem",
   padding: "8px",
+  justifyContent: "space-between",
   textAlign: "center",
   zIndex: 30,
+})
+
+const Copyright = styled.span({
+  fontSize: "0.8rem",
+})
+
+const Hidi = styled.span({
+  display: "none",
+
+  [mq[1]]: {
+    display: "flex",
+  },
 })
 
 interface FooterProps {
@@ -19,13 +33,11 @@ interface FooterProps {
 
 const Footer = ({ copyright }: FooterProps) => (
   <FooterContainer>
-    {copyright}
+    <Hidi />
+    <Copyright>{copyright}</Copyright>
     <StaticImage
       src="../../static/images/ethics-registered-member-badge.png"
       className="bg"
-      style={{
-        position: `absolute`,
-      }}
       alt="Ethics registered member badge"
       title="Ethics registered member badge"
       placeholder="blurred"

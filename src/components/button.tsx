@@ -1,0 +1,55 @@
+import React from "react"
+
+import styled from "@emotion/styled"
+import { mq } from "./styles"
+
+const ButtonContainer = styled.a({
+  alignItems: "center",
+  backgroundColor: "#fff",
+  border: "none",
+  borderColor: "#dbdbdb",
+  borderWidth: "1px",
+  boxShadow: "0 8px 14px -12px rgba(0, 0, 0, .56), 0 4px 15px 0 rgba(0, 0, 0, .12)",
+  borderRadius: "18155.375rem",
+  color: "#138fc2",
+  cursor: "pointer",
+  display: "flex",
+  fontSize: ".9375rem",
+  fontWeight: 600,
+  height: "2.25em",
+  justifyContent: "center",
+  letterSpacing: ".06875rem",
+  lineHeight: 1.8,
+  marginRight: "1rem",
+  marginBottom: "1rem",
+  padding: "0.3rem 1.2rem",
+  position: "relative",
+  textAlign: "center",
+  textDecoration: "none",
+  textTransform: "capitalize",
+  transition: ".3s",
+  whiteSpace: "nowrap",
+  verticalAlign: "top",
+
+  ":active, :hover": {
+    backgroundColor: "#209cee",
+    color: "#fff",
+    transition: ".3s",
+  },
+
+  [mq[1]]: {
+    display: "inline-flex",
+  },
+})
+
+interface ButtonProps {
+  text: string
+  url: string
+  title: string
+}
+
+const Button = ({ text, url, title }: ButtonProps) => (
+  <ButtonContainer href={url} title={title}>{text}</ButtonContainer>
+)
+
+export default Button

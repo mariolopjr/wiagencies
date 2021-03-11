@@ -2,14 +2,22 @@ import React from "react"
 import { Link } from "gatsby"
 
 import styled from "@emotion/styled"
+import { mq } from "./styles"
 
 const HeadContainer = styled.div({
+  alignItems: "center",
+  display: "flex",
   flexGrow: 0,
   flexShrink: 0,
+  justifyContent: "center",
+
+  [mq[1]]: {
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
+  },
 })
 
 const Nav = styled.nav({
-  alignItems: "stretch",
   display: "flex",
   minHeight: "3.25rem",
   position: "relative",
@@ -17,7 +25,6 @@ const Nav = styled.nav({
 })
 
 const BrandContainer = styled.div({
-  alignItems: "stretch",
   display: "flex",
   flexShrink: 0,
   minHeight: "3.25rem",

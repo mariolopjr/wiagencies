@@ -10,12 +10,15 @@ const TitleContainer = styled.h1({
   fontWeight: 500,
   letterSpacing: 1.3,
   lineHeight: 1.125,
-  margin: 0,
+  margin: "0 auto",
+  marginBottom: "1rem",
   padding: ".75rem",
-  width: "50%",
+  width: "80%",
 
   [mq[1]]: {
     fontSize: "2.5rem",
+    margin: 0,
+    width: "50%",
   },
 })
 
