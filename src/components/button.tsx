@@ -20,8 +20,8 @@ const ButtonContainer = styled.a({
   justifyContent: "center",
   letterSpacing: ".06875rem",
   lineHeight: 1.8,
+  marginBottom: "2rem",
   marginRight: "1rem",
-  marginBottom: "1rem",
   padding: "0.3rem 1.2rem",
   position: "relative",
   textAlign: "center",
@@ -39,6 +39,12 @@ const ButtonContainer = styled.a({
 
   [mq[1]]: {
     display: "inline-flex",
+    marginBottom: "1rem",
+  },
+
+  "@media screen and (orientation: landscape) and (max-width: 1088px)": {
+    display: "inline-flex",
+    marginBottom: "1rem",
   },
 })
 
