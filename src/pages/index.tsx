@@ -35,7 +35,7 @@ const IndexPage = () => (
     <Container>
       <Title title="It's all about keeping you safe while saving you money" />
       <PhoneButton type="office" phone="352-462-0414" />
-      <PhoneButton type="fax" phone="888-413-6642" />
+      <PhoneButton type="fax" phone="800-418-4261" />
       <EmailButton text="Email us" email="wiagencies@gmail.com" />
       <Button
         text="Visit us"
