@@ -35,6 +35,7 @@ module.exports = {
         legacy: false,
       },
     },
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-sri`,
   ],
 }
