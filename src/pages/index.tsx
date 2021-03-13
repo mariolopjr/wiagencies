@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticQuery, graphql } from "gatsby"
 
 import styled from "@emotion/styled"
 import { mq } from "../components/styles"
@@ -31,18 +32,34 @@ const Container = styled.div({
 })
 
 const IndexPage = () => (
-  <Layout>
-    <Container>
-      <Title title="It's all about keeping you safe while saving you money" />
-      <PhoneButton type="office" phone="352-462-0414" />
-      <PhoneButton type="fax" phone="800-418-4261" />
-      <EmailButton text="Email us" email="wiagencies@gmail.com" />
-      <Button
-        text="Visit us"
-        url="https://www.google.com/maps/place/8+Beverly+Hills+Blvd,+Beverly+Hills,+FL+34465/@28.9267856,-82.4614126,17z"
-        title="Visit us" />
-    </Container>
-  </Layout>
+  <StaticQuery
+    query={graphql`
+      query LayoutButtonsQuery {
+        site {
+          siteMetadata {
+            phone
+            fax
+            email
+            gmaps
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Layout>
+        <Container>
+          <Title title="It's all about keeping you safe while saving you money" />
+          <PhoneButton type="office" phone={data.site.siteMetadata.phone} />
+          <PhoneButton type="fax" phone={data.site.siteMetadata.fax} />
+          <EmailButton text="Email us" email={data.site.siteMetadata.email} />
+          <Button
+            text="Visit us"
+            url={data.site.siteMetadata.gmaps}
+            title="Visit us" />
+        </Container>
+      </Layout>
+    )}
+  />
 )
 
 export default IndexPage

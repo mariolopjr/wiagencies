@@ -2,6 +2,10 @@ module.exports = {
   siteMetadata: {
     title: 'World Insurance',
     siteUrl: 'https://wiagencies.com',
+    phone: '352-462-0414',
+    fax: '800-418-4261',
+    email: 'wiagencies@gmail.com',
+    gmaps: 'https://www.google.com/maps/place/8+Beverly+Hills+Blvd,+Beverly+Hills,+FL+34465/@28.9267856,-82.4614126,17z',
   },
   plugins: [
     {
